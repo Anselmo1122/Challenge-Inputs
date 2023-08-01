@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Noto+Sans+JP:wght@400;500;700&family=Poppins:wght@600&family=Ubuntu+Mono&display=swap');
+
+.input__container {
+    display: flex;
+    flex-direction: column-reverse;
+    row-gap: .3rem;
+}
+
+.input {
+    max-width: 230px;
+}
+
+input {
+    padding: 1.3rem .8rem;
+    outline: none;
+    border: none;
+    border-radius: .6rem;
+    border: 1px solid #828282;
+    font: 500 .9rem 'Noto Sans JP', sans-serif;
+    color: #333333;
+}
+
+textarea {
+    padding: 1.3rem .8rem;
+    outline: none;
+    border: none;
+    border-radius: .6rem;
+    border: 1px solid #828282;
+    font: 500 .9rem 'Noto Sans JP', sans-serif;
+    color: #333333;
+    resize: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #828282;
+    font-size: 1rem;
+}
+
+label {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: .9rem;
+    color: #333333;
+}
+
+label:hover {
+    color: #333333;
+}
+
+input:hover {
+    border-color: #333333;
+}
+input:focus {
+    border-color: #2962FF;
+}
+
+label:focus-within {
+    color: #2962FF;
+}
+
+/* ====== Input Element */
+
+.input__element {
+    display: flex;
+    align-items: center;
+}
+.input__element .icon-start,
+.input__element .icon-end  {
+    font-size: 2rem;
+    color: #828282;
+    padding: .95rem 0;
+    border: 1px solid;
+}
+
+.input__element .icon-start {
+    padding-left: .8rem;
+    border-right: none;
+    border-radius: .6rem 0 0 .6rem;
+}
+.input__element .icon-end {
+    padding-right: .8rem;
+    border-left: none;
+    border-radius: 0 .6rem .6rem 0;
+}
+
+.input.start__icon {
+    border-left: none;
+    border-radius: 0 .6rem .6rem 0;
+}
+.input.end__icon {
+    border-right: none;
+    border-radius: .6rem 0 0 .6rem;
+}
+
+/* ====== Input Error */
+
+label.error {
+    color:#D32F2F;
+}
+
+
+
+.input.error {
+    border: 1px solid #D32F2F;
+    color: #333333;
+}
+.input.error label {
+    color: #D32F2F;
+}
+.input.error:hover {
+    border-color: #333333;
+}
+label.error:hover {
+    color: #333333;
+}
+label.error:focus-within {
+    color: #D32F2F;
+}
+.input.error:focus {
+    border-color: #D32F2F;
+}
+
+
+
+/* ====== Input Disabled */
+
+.input.disabled {
+    background-color:#F2F2F2;
+    border: 1px solid #E0E0E0;
+    color: #333333;
+    user-select: none;
+}
+.input.disabled + label {
+    color: #333333;
+}
+
+/* ====== Helper Text */
+
+.helper-text {
+    font-size: .75rem;
+    color: #a1a1a1;
+    user-select: none;
+}
+.helper-text.error {
+    color: #D32F2F;
+}
+
+/* ====== Size */
+.input.size__sm {
+    padding: .7rem .8rem;
+}
+.input.size__md {
+    padding: 1.3rem .8rem;
+}
+
+/* ====== FullWidth */ 
+
+.input.full-width {
+    width: 100%;
+    max-width: 100%;
+}
+
+.input__container:hover .icon-start,
+.input__container:hover .icon-end {
+    color: #333333;
+}
+
+.input__element:focus-within .icon-start,
+.input__element:focus-within .icon-end {
+    color: #2962FF;
+}
+
+textarea:focus {
+    border-color: #2962FF;
+}

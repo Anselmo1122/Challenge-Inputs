@@ -1,42 +1,83 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+
+#App {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+/* ====== Section main */
+
+#main {
+  flex-grow: 1;
+  padding: 2rem 1rem 2rem 4rem;
+  width: auto;
+  border-bottom: 5px solid #fafafa;
+}
+
+.main__title {
+  margin-bottom: 2.5rem;
+  font: normal 500  2rem Poppins, sans-serif;
+  color: #4f4f4f;
+}
+
+/* ====== Section buttons */
+
+.inputs__row {
+  width: 100%;
+  margin: 1rem 0;
+  margin-bottom: 4rem;
+  display: grid;
+}
+
+.inputs__row:first-child,
+.inputs__row:nth-child(2),
+.inputs__row:nth-child(6) {
+  max-width: 600px;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 3rem;
+}
+.inputs__row:nth-child(8) {
+  grid-template-columns: repeat(1, 1fr);
+}
+.inputs__row:nth-child(9) {
+  grid-template-columns: repeat(4, 1fr);
+  place-items: flex-end;
+}
+
+.inputs__row:nth-child(4),
+.inputs__row:nth-child(5),
+.inputs__row:nth-child(7) {
+  max-width: 850px;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 3rem;
+}
+
+
+.inputs__item {
+  width: 100%;
+}
+
+.inputs__desc {
+  font-family: Ubuntu Mono;
+  font-weight: 400;
+  margin-bottom: 1.3rem;
+  color: #828282;
+}
+.inputs__desc.hover {
+  color: #b6b6b6;
+}
+
+/* ====== Footer */
+.footer {
+  margin: 9rem 0 1rem 0;
   text-align: center;
+  font: normal 400 0.8rem Montserrat, sans-serif;
+  color: #828282;
 }
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+.username a {
+  margin: 0 .2rem;
+  font-weight: 700;
+  color: #828282;
 }
